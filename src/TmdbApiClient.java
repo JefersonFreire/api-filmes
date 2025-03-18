@@ -16,8 +16,6 @@ public class TmdbApiClient {
 
     public String getBody(){
 
-
-
         try {
             URI apiTMDB = URI.create("https://api.themoviedb.org/3/movie/top_rated");
 
@@ -35,6 +33,7 @@ public class TmdbApiClient {
         }catch (IOException | InterruptedException e){
             throw new IllegalStateException(e);
         }
+
     }
 }
 
