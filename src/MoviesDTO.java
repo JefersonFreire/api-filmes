@@ -1,7 +1,7 @@
-public record MoviesDTO(
+public record MoviesDTO (
         String title,
         String urlImage,
         Double rating,
-        String year) {
+        String year) implements Content{
 
 }
