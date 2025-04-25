@@ -12,7 +12,7 @@ public class Main {
 
         json = new TmdbApiClient(apikey, MoviesParse.page).getBody();
 
-        List<Movies> movies = MoviesParse.parseMovies(json, topMovies);
+        List<Movies> movies = MoviesParse.parse(json, topMovies);
         System.out.println(movies);
         System.out.println(movies.size());
     }

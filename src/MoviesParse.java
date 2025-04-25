@@ -4,7 +4,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MoviesParse {
+public class MoviesParse implements JsonParse{
 
     static int page = 1;
     int topMovies ;
@@ -15,7 +15,7 @@ public class MoviesParse {
         this.topMovies = topMovies;
     }
 
-    public static List<Movies> parseMovies(String json, int topMovies){
+    public static List<Movies> parse(String json, int topMovies){
         List<Movies> movies = new ArrayList<>();
 
         while (movies.size() < topMovies) {
@@ -37,5 +37,4 @@ public class MoviesParse {
         }
         return movies;
     }
-
 }
